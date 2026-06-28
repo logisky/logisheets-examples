@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LogiSheets Engine — Vanilla JS</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html,
+            body,
+            #app {
+                width: 100%;
+                height: 100%;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                    sans-serif;
+                overflow: hidden;
+            }
+            #app {
+                display: flex;
+                flex-direction: column;
+            }
+            /* Formula bar */
+            #formula-bar {
+                display: flex;
+                align-items: stretch;
+                gap: 8px;
+                height: 34px;
+                padding: 4px 8px;
+                border-bottom: 1px solid #e0e0e0;
+                background: #fafafa;
+            }
+            #cell-ref {
+                width: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: monospace;
+                font-size: 13px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                background: #fff;
+            }
+            #formula-editor {
+                flex: 1;
+            }
+            /* The grid fills the rest. It MUST have an explicit size — the
+               engine renders a canvas that fills this container. */
+            #grid {
+                flex: 1;
+                position: relative;
+                min-height: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div id="formula-bar">
+                <div id="cell-ref">A1</div>
+                <div id="formula-editor"></div>
+            </div>
+            <div id="grid"></div>
+        </div>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
