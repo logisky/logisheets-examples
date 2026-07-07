@@ -1,0 +1,12 @@
+[package]
+name = "logisheets-sdk-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# Standalone example — its own workspace so it doesn't attach to a parent.
+[workspace]
+
+[dependencies]
+# The published LogiSheets Rust SDK.
+logisheets-rs = "1.3"
